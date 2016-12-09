@@ -74,7 +74,7 @@ public class Node<T> {
             traversalV2(root.getLeftNode());
 
             if (printLeftParam) {
-                System.out.print("(");
+                builder.append("(");
                 printLeftParam = false;
             }
 
@@ -82,12 +82,12 @@ public class Node<T> {
                 printRightParam = true;
 
             // inorder node
-            System.out.print(root.getValue());
+            builder.append(root.getValue());
 
             traversalV2(root.getRightNode());
 
             if (printRightParam) {
-                System.out.print(")");
+                builder.append(")");
                 printRightParam = false;
             }
         }
